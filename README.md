@@ -41,23 +41,21 @@ Randomly choose another chromosome from the population; call this b. The fittest
 **Single-Point Crossover:** Randomly select a ‘crossover point’ which should be smaller than the total 
 length of the chromosome. Take the two parents, and swap the gene values between them ONLY for 
 those genes which appear AFTER the crossover point to create two new children. <br> </br>
-**Mutation:** This is dependent on your representation, look at the lecture slides for some ideas on 
-which mutation to implement given your representation. Your mutation function must take a single 
+**Mutation:** Bitwise represenatation is used to solve the problem, where 0 means the bag was not choosen and 1 means the bag was choosen.
+To perform mutation, the bit or the gene is reversed. The mutation function must take a single 
 integer parameter which will determine how many times it is repeated on a solution (e.g. M(1) –
-one mutation per chromosome, M(3) – 3 mutations). <br> </br>
+one mutation per chromosome (1 randomly selected gene reversed), M(3) – 3 mutations (3 randomly selected genes reversed)). <br> </br>
 **Weakest Replacement:** If the new solution is fitter than the worst in the population, then overwrite 
 the worst (breaking ties randomly) with the new solution. <br> </br>
 
 ## Implementation and Experimentation
-Implement the described EA in such a way that you can address the above problem and then run the 
-experiments described below and answer the subsequent questions. Note that, in all of the below, a 
-single trial means that you run the algorithm once and stop it when 10,000 fitness evaluations have 
-been reached. Different trials of the same algorithm should be seeded with different random 
+Here, a single trial means that we run the algorithm once and stop it when 10,000 fitness evaluations have 
+been reached. Different trials of the same algorithm are seeded with different random 
 number seeds.<br> </br> 
-You should devise your own set of experiments to determine what effect (if any) the following 
+We devise a set of experiments to determine what effect (if any) the following 
 parameters have on the performance of the optimisation:
 1. Tournament size(t)
 2. Population size (p)
 3. Mutation rate (i.e. the parameter identified in the mutation operator above) (m)
-Your experiments should assess the performance of the algorithm over a number of randomly seeded 
+The experiments assess the performance of the algorithm over a number of randomly seeded 
 trials for each setting of t, p, m, to provide robust results.
