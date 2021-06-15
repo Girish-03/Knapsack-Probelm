@@ -41,7 +41,7 @@ Randomly choose another chromosome from the population; call this b. The fittest
 **Single-Point Crossover:** Randomly select a ‘crossover point’ which should be smaller than the total 
 length of the chromosome. Take the two parents, and swap the gene values between them ONLY for 
 those genes which appear AFTER the crossover point to create two new children. <br> </br>
-**Mutation:** Bitwise represenatation is used to solve the problem, where 0 means the bag was not choosen and 1 means the bag was choosen.
+**Mutation:** Binary Encoding represenatation is used in the problem, where 0 means the bag was not choosen and 1 means the bag was choosen.
 To perform mutation, the bit or the gene is reversed. The mutation function must take a single 
 integer parameter which will determine how many times it is repeated on a solution (e.g. M(1) –
 one mutation per chromosome (1 randomly selected gene reversed), M(3) – 3 mutations (3 randomly selected genes reversed)). <br> </br>
