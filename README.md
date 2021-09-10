@@ -34,7 +34,7 @@ population size), and evaluate the fitness of everything in the population.
 6. If a termination criterion has been reached, then stop. Otherwise return to step 2
 
 **Termination Criterion:** Will simply be having reached a maximum number of fitness evaluations which 
-is 10,000 (see Implementation and Experimentation below). <br> </br>
+is 10,000. <br> </br>
 **Binary Tournament Selection:** Randomly choose a chromosome from the population; call it a. 
 Randomly choose another chromosome from the population; call this b. The fittest of these two 
 (breaking ties randomly) becomes the selected parent. <br> </br>
